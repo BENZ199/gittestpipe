@@ -30,9 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git clone https://github.com/BENZ199/gittestpipe.git
-          cd gittestpipe
-          git flow init -d
+          git branch
           git checkout ${{ github.event.pull_request.head.ref }}
           git flow feature finish ${{ github.event.pull_request.head.ref }}
           git push origin develop
