@@ -32,7 +32,6 @@ jobs:
         run: |
           git clone https://github.com/BENZ199/gittestpipe.git
           cd gittestpipe
-          git flow init
-          git checkout feature/test
-          git flow feature finish test
+          git checkout ${{ github.event.pull_request.head.ref }}
+          git flow feature finish ${{ github.event.pull_request.head.ref }}
           git push origin develop
