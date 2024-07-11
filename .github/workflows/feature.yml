@@ -30,6 +30,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git flow checkout feature/testpipe
+          git checkout feature/testpipe
           git flow feature finish testpipe
           git push origin develop
