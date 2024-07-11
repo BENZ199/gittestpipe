@@ -26,10 +26,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git-flow
 
-      - name: Initialize GitFlow
-        run: |
-          git flow init -d
-
       - name: Finish feature branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
