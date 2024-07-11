@@ -34,5 +34,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git flow feature finish ${{ github.head_ref }}
+          git flow checkout feature/testpipe
+          git flow feature finish testpipe
           git push origin develop
